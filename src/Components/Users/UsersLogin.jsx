@@ -19,9 +19,8 @@ const UsersLogin = () => {
     fetchUsersApi();
   }, []);
 
-  // todo : collect all email and pasword from jsondata
+  // todo : collect all email from jsondata
   let AllUsersEmail = usersData.map((elem) => elem.email);
-  let AllUsersPassword = usersData.map((elem) => elem.password);
 
   // todo : collect all input values from the input field
   let [formData, setFormData] = useState({ email: "", password: "" });
