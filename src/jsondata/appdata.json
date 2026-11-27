@@ -239,6 +239,18 @@
         "count": 130
       },
       "id": "toXeYuWFQBA"
+    },
+    {
+      "title": "Watch",
+      "price": 25,
+      "description": "i Love watch",
+      "category": "electronics",
+      "image": "https://m.media-amazon.com/images/I/71SIGhQn+YL._SX679_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 120
+      },
+      "id": "SDmQCYaHVVQ"
     }
   ],
   "users": [
@@ -251,6 +263,16 @@
       "dateofbirth": "2004-01-01",
       "place": "Udupi",
       "id": "8WqDAOJeghE"
+    },
+    {
+      "firstname": "Ranjitha",
+      "lastname": "R",
+      "contact": "9876543234",
+      "email": "Ranjitha@gmail.com",
+      "password": "ran123",
+      "dateofbirth": "1999-01-01",
+      "place": "Banglore",
+      "id": "qkwEB0M913o"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
