@@ -36,9 +36,8 @@ const UsersLogin = () => {
     e.preventDefault();
     let { email, password } = formData;
 
-    // todo : check the email / password is present or not in Database & target index value
+    // todo : check the email is present or not in Database & target index value
     let emailIndex = AllUsersEmail.indexOf(email);
-    // let passwordIndex = AllUsersPassword.indexOf(password)
 
     if (emailIndex !== -1) {
       if (usersData[emailIndex].password === password) {
