@@ -21,7 +21,7 @@ const ViewMore = () => {
 
   useEffect(() => {
     singleProductProduct();
-  }, []);
+  } , []);
 
   let { id, title, description, category, image, price, rating } = oneProduct;
 
