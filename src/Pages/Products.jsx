@@ -1,9 +1,11 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLoaderData, useLocation, useNavigate } from 'react-router-dom'
 
 const Products = () => {
+  const locationobj = useLocation()
+  let bool = locationobj.pathname.startsWith('/adminportal')
 
   let [products, setProducts] = useState([])
   let [selectedCategory, setSelectedCategory] = useState("all")
@@ -20,7 +22,7 @@ const Products = () => {
   const navigate = useNavigate()
 
   let handleViewmoreBtn = (id) => {
-    navigate(`/adminportal/viewmore/${id}`)
+    {bool ? navigate(`/adminportal/viewmore/${id}`) : navigate(`/usersportal/viewmore/${id}`)}
   }
 
   // Filter Logic
@@ -28,7 +30,7 @@ const Products = () => {
     if (selectedCategory === "all") {
       return true
     }
-    return elem.category === selectedCategory
+    return elem.category === selectedCategory 
   })
 
   return (
@@ -36,9 +38,9 @@ const Products = () => {
 
       <div className="head">
         <h1>All Products</h1>
-        <button onClick={() => navigate(`/adminportal/addproducts`)}>
+        {bool && <button onClick={() => navigate(`/adminportal/addproducts`)}>
           Add Product
-        </button>
+        </button>}
       </div>
 
       {/* Filter Buttons */}

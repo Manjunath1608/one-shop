@@ -10,6 +10,9 @@ const UsersNavbar = () => {
             <NavLink to="/usersportal/">Home</NavLink>
           </li>
           <li>
+            <NavLink to="/usersportal/about">About</NavLink>
+          </li>
+          <li>
             <NavLink to="/usersportal/products">Products</NavLink>
           </li>
           <li>

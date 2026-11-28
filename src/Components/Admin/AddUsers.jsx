@@ -34,7 +34,7 @@ const AddUsers = () => {
     try {
       let response = await axios.post("http://localhost:4000/users", formdata);
 
-      console.log(response.data);
+      // console.log(response.data);
 
       toast.success("User Registered Successfully");
 
